@@ -9,12 +9,12 @@ stream: independent
 
 date:
 consensus:
-area:
-workgroup:
+# area:
+# workgroup:
 keyword:
 
 venue:
-  mail: "ietf@ietf.org"
+#  mail: "ietf@ietf.org"
   github: "cabo/restatement"
 
 author:
