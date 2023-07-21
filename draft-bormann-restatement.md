@@ -8,9 +8,9 @@ category: info
 stream: independent
 
 date:
-consensus: 
-area: 
-workgroup: 
+consensus:
+area:
+workgroup:
 keyword:
 
 venue:
@@ -424,11 +424,11 @@ the base standard in a number of places.
 Reviewing the draft {{I-D.draft-ietf-acme-subdomains-04}}, {{acme-comment}} states:
 
 > \## restatement vs. new normative content
-> 
+>
 > Providing a specification of a new feature added to ACME, the text
 > explains a number basic ACME mechanisms that are relevant to this
 > specification.
-> 
+>
 > One pervasive problem is that these restatements of RFC 8555 content
 > are not always easy to distinguish from new, normative statements made
 > by this document.
@@ -437,7 +437,7 @@ Reviewing the draft {{I-D.draft-ietf-acme-subdomains-04}}, {{acme-comment}} stat
 > normative content.
 > (Languagetool diagnoses overuse of passive voice, which exacerbates
 > this problem.)
-> 
+>
 > (The first paragraph of section 4 repeats the last paragraph of
 > section 3.  But that is not a problem; redundancy can be good if it
 > improves the flow, and this is clearly labeled as a restatement.)
