@@ -289,6 +289,9 @@ sufficiently identified by the authors as such.
   non-local reference is resolvable and well-scoped.
 - Rephrasing the statement as a Note can make clear that there is no
   normative intention.
+- Examples MUST be identified clearly as such, including identifying
+  any explanatory notes as such so that these are not misunderstood as
+  new normative statements.
 
 If a larger copy from a cited document is made, it SHOULD be made
 verbatim and differences introduced deliberately should be explicitly
