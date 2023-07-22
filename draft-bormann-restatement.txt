@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                              21 July 2023
-Expires: 22 January 2024
+Intended status: Informational                              22 July 2023
+Expires: 23 January 2024
 
 
                       The Restatement Anti-Pattern
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 January 2024.
+   This Internet-Draft will expire on 23 January 2024.
 
 Copyright Notice
 
@@ -66,16 +66,19 @@ Table of Contents
    3.  Reasons for making restatements
      3.1.  Integrating a Complicated Base Standard Ecosystem
      3.2.  Trying to be a Textbook for the Implementer
-     3.3.  Trying to Raise Attention to a Detail Deemed Surprising
-     3.4.  Bad formal description techniques
+     3.3.  Increasing Availability from a Source with Restricted
+           Access
+     3.4.  Trying to Raise Attention to a Detail Deemed Surprising
+     3.5.  Bad formal description techniques
    4.  Perils of restatements
    5.  Defusing restatements
      5.1.  Summary of Recommendations
    6.  Examples
      6.1.  Example: Web linking RFC8288
-     6.2.  Example: Date-Time in YANG (RFC6991)
-     6.3.  Example: ACME for Subdomains (RFC9444-to-be)
-     6.4.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
+     6.2.  Example: Restatement of ISO8601:1988 in RFC3339
+     6.3.  Example: Date-Time in YANG (RFC6991)
+     6.4.  Example: ACME for Subdomains (RFC9444-to-be)
+     6.5.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
    7.  Security Considerations
    8.  IANA Considerations
    9.  References
@@ -176,7 +179,16 @@ Table of Contents
    implemented instead of actually identifying where the requirement and
    possibly its finer points come from.
 
-3.3.  Trying to Raise Attention to a Detail Deemed Surprising
+3.3.  Increasing Availability from a Source with Restricted Access
+
+   In some cases, normative information from a cited document is not
+   openly available, but only under specific conditions that cannot be
+   expected to be satisfied by all users of the referencing document,
+   such as membership in an organization or payment of a non-trivial
+   fee.  It may be appropriate to restate information from such a source
+   so the referencing document becomes useful.
+
+3.4.  Trying to Raise Attention to a Detail Deemed Surprising
 
    The author of the referencing document may see a need to alert the
    reader to a detail of the cited document that might seem unintuitive
@@ -184,14 +196,14 @@ Table of Contents
    more familiar to readers of the referencing document, this alert can
    be more useful.
 
-3.4.  Bad formal description techniques
+3.5.  Bad formal description techniques
 
    Formal description techniques (_FDT_, such as ABNF) are usually
    designed to document a single specific artifact, not its evolution or
    its embedding into another artifact.  This can lead to wholesale
    imports of FDT material, without indication whether just the FDT was
    imported or whether the importing document is intended to evolve with
-   the donor document.  See Section 6.1 and Section 6.2 for additional
+   the donor document.  See Section 6.1 and Section 6.3 for additional
    illustration of this reason.
 
 4.  Perils of restatements
@@ -213,7 +225,7 @@ Table of Contents
    statements in a cited document, but is likely to receive much more
    attention during review.)
 
-   Section 6.4 presents an example for the situation where a reader
+   Section 6.5 presents an example for the situation where a reader
    might infer behavior based on the common law statute interpretation
    rule:
 
@@ -240,7 +252,7 @@ Table of Contents
    A restatement can cause _maintainability hazards_, as illustrated in
    Section 6.1; it also can cause a referencing document to _decouple_
    from the ecosystem of a cited document once that is repaired
-   (Section 6.2).
+   (Section 6.3).
 
    Finally, to readers familiar with the cited document, the restatement
    can be surprising; if there really is no information in the
@@ -287,6 +299,10 @@ Table of Contents
    *  Rephrasing the statement as a Note can make clear that there is no
       normative intention.
 
+   *  Examples MUST be identified clearly as such, including identifying
+      any explanatory notes as such so that these are not misunderstood
+      as new normative statements.
+
    If a larger copy from a cited document is made, it SHOULD be made
    verbatim and differences introduced deliberately should be explicitly
    identified, possibly in a second step.  Note that the FDT mechanisms
@@ -303,6 +319,13 @@ Table of Contents
    By making the copy informative, repairs from the base document (in
    the [RFC2397] example e.g. [errata2397]) can be imported, even future
    ones.
+
+   Where the copy is made because the cited document is not openly
+   available, this also often requires more processing than a verbatim
+   copy, increasing the probability of introducing errors and
+   misunderstandings.  This can be somewhat mitigated by clearly stating
+   the purpose of a restatement, and the intended result when the
+   restatement and the original diverge.
 
 5.1.  Summary of Recommendations
 
@@ -395,7 +418,22 @@ Table of Contents
    *  the ABNF in [RFC6690] would need to be rewritten to apply the rule
       cardinal to the extracted value of the link-param.
 
-6.2.  Example: Date-Time in YANG (RFC6991)
+6.2.  Example: Restatement of [ISO8601:1988] in [RFC3339]
+
+   [RFC3339] was largely intended as a freely available restatement of
+   the paywalled [ISO8601:1988], with focus added on formally defining
+   the parts that might be useful in the Internet.  However, when
+   [ISO8601:2000] introduced additional text that seemed to disallow the
+   syntax used for one extension that Section 4.3 of [RFC3339] had made
+   to the semantics of [ISO8601:1988], the precedence remained unclear.
+   Implementers of Internet-related standards largely ignored the
+   additional semantics of that extension anyway, while implementers of
+   [ISO8601:1988] in general often performed input validation that made
+   sure the extension made by [RFC3339] wouldn't work.  (This is only
+   now being addressed by Section 2 of
+   [I-D.ietf-sedate-datetime-extended].)
+
+6.3.  Example: Date-Time in YANG (RFC6991)
 
    [RFC6991] defines a YANG type date-and-time on page 11, restating
    parts of [RFC3339] (the restatement is also faulty in its item (b),
@@ -408,7 +446,7 @@ Table of Contents
    problem that is not entirely _caused_ by restatements but gets much
    harder to discuss.
 
-6.3.  Example: ACME for Subdomains (RFC9444-to-be)
+6.4.  Example: ACME for Subdomains (RFC9444-to-be)
 
    RFC9444-to-be defines a new feature added to [RFC8555], referencing
    the base standard in a number of places.
@@ -440,7 +478,7 @@ Table of Contents
 
    (These problems were addressed in a later draft of RFC9444-to-be.)
 
-6.4.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
+6.5.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
 
    Base64 encoding is defined in [RFC4648], but comes in a number of
    variants.  These often have default settings that are to be used
@@ -546,6 +584,22 @@ Table of Contents
               Internet-Draft, draft-ietf-sedate-datetime-extended-09, 14
               July 2023, <https://datatracker.ietf.org/doc/html/draft-
               ietf-sedate-datetime-extended-09>.
+
+   [ISO8601:1988]
+              ISO, "Data elements and interchange formats — Information
+              interchange — Representation of dates and times",
+              ISO 8601:1988, June 1988,
+              <https://www.iso.org/standard/15903.html>.  Also available
+              from <https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/
+              fipspub4-1-1991.pdf
+              (https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/
+              fipspub4-1-1991.pdf)>.
+
+   [ISO8601:2000]
+              ISO, "Data elements and interchange formats — Information
+              interchange — Representation of dates and times",
+              ISO 8601:2000, December 2000,
+              <https://www.iso.org/standard/26780.html>.
 
    [KOENIG]   Koenig, A., "Patterns and Antipatterns", J. Object
               Oriented Program. 8(1): pp. 46-48, 1995.
