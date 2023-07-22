@@ -65,7 +65,7 @@ informative:
   RFC6991:
   I-D.ietf-netmod-rfc6991-bis:
   RFC3339:
-  I-D.ietf-sedate-datetime-extended:
+  I-D.ietf-sedate-datetime-extended: sedate
   I-D.draft-ietf-rats-eat-20:
   rats-comment:
     target: https://mailarchive.ietf.org/arch/msg/rats/H8qXwQywD0W6x4QcC9Iwd5LYl2s
@@ -82,6 +82,32 @@ informative:
       [Last-Call] Artart last call review of draft-ietf-acme-subdomains-04
     author:
       name: Carsten Bormann
+  ISO8601:
+    display: ISO8601:1988
+    target: https://www.iso.org/standard/15903.html
+    title: >
+      Data elements and interchange formats — Information interchange —
+      Representation of dates and times
+    author:
+    - org: International Organization for Standardization
+      abbrev: ISO
+    seriesinfo:
+      ISO: '8601:1988'
+    date: 1988-06
+    ann: Also available from <⁠<https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub4-1-1991.pdf>>.
+  ISO8601-2000:
+    display: 'ISO8601:2000'
+    target: https://www.iso.org/standard/26780.html
+    title: >
+      Data elements and interchange formats — Information interchange —
+      Representation of dates and times
+    author:
+    - org: International Organization for Standardization
+      abbrev: ISO
+    seriesinfo:
+      ISO: '8601:2000'
+    date: 2000-12
+
 
 --- abstract
 
@@ -181,6 +207,15 @@ source for an implementer or user of a standard, e.g., by giving a
 mere checklist of items (not necessarily complete!) that must be
 implemented instead of actually identifying where the requirement and
 possibly its finer points come from.
+
+## Increasing Availability from a Source with Restricted Access 
+
+In some cases, normative information from a cited document is not
+openly available, but only under specific conditions that cannot be
+expected to be satisfied by all users of the referencing document,
+such as membership in an organization or payment of a non-trivial fee.
+It may be appropriate to restate information from such a source so the
+referencing document becomes useful.
 
 ## Trying to Raise Attention to a Detail Deemed Surprising
 
@@ -312,6 +347,14 @@ By making the copy informative, repairs from the base document (in the
 {{RFC2397}} example e.g. {{errata2397}}) can be imported, even future
 ones.
 
+Where the copy is made because the cited document is not openly
+available, this also often requires more processing than a verbatim
+copy, increasing the probability of introducing errors and
+misunderstandings.
+This can be somewhat mitigated by clearly stating the purpose of a
+restatement, and the intended result when the restatement and the
+original contradict each other.
+
 ## Summary of Recommendations
 
 (...Add nice checklist text for authors and reviewers based on {{defuse}} later...)
@@ -405,6 +448,20 @@ The letter of this specification for instance prohibits `sz="47"`
   general problem with updated \["obsoleted"] references)
 * the ABNF in {{RFC6690}} would need to be rewritten to apply the rule
   `cardinal` to the extracted value of the link-param.
+
+## Example: Restatement of {{ISO8601}} in {{RFC3339}}
+
+{{RFC3339}} was largely intended as a freely available restatement of
+the paywalled {{ISO8601}}, with focus added on formally defining the
+parts that might be useful in the Internet.
+However, when {{ISO8601-2000}} introduced additional text that seemed to
+disallow the syntax used for one extension {{Section 4.3 of RFC3339}} had made to the
+semantics of {{ISO8601}}, the precedence remained unclear.
+Implementers of Internet-related standards largely ignored the
+additional semantics of that extension, while implementers of
+{{ISO8601}} in general often performed input validation that made sure
+the extension made by {{RFC3339}} wouldn't work.
+(This is only now being addressed by {{Section 2 of -sedate}}.)
 
 ## Example: Date-Time in YANG (RFC6991) {#example-6991}
 
