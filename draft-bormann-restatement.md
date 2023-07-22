@@ -353,7 +353,7 @@ copy, increasing the probability of introducing errors and
 misunderstandings.
 This can be somewhat mitigated by clearly stating the purpose of a
 restatement, and the intended result when the restatement and the
-original contradict each other.
+original diverge.
 
 ## Summary of Recommendations
 
@@ -455,10 +455,11 @@ The letter of this specification for instance prohibits `sz="47"`
 the paywalled {{ISO8601}}, with focus added on formally defining the
 parts that might be useful in the Internet.
 However, when {{ISO8601-2000}} introduced additional text that seemed to
-disallow the syntax used for one extension {{Section 4.3 of RFC3339}} had made to the
-semantics of {{ISO8601}}, the precedence remained unclear.
+disallow the syntax used for one extension that {{Section 4.3 of
+RFC3339}} had made to the semantics of {{ISO8601}}, the precedence
+remained unclear.
 Implementers of Internet-related standards largely ignored the
-additional semantics of that extension, while implementers of
+additional semantics of that extension anyway, while implementers of
 {{ISO8601}} in general often performed input validation that made sure
 the extension made by {{RFC3339}} wouldn't work.
 (This is only now being addressed by {{Section 2 of -sedate}}.)
