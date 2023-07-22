@@ -208,7 +208,7 @@ mere checklist of items (not necessarily complete!) that must be
 implemented instead of actually identifying where the requirement and
 possibly its finer points come from.
 
-## Increasing Availability from a Source with Restricted Access 
+## Increasing Availability from a Source with Restricted Access
 
 In some cases, normative information from a cited document is not
 openly available, but only under specific conditions that cannot be
