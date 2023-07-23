@@ -47,6 +47,17 @@ Status of This Memo
 
    This Internet-Draft will expire on 24 January 2024.
 
+
+
+
+
+
+
+Bormann                  Expires 24 January 2024                [Page 1]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
 Copyright Notice
 
    Copyright (c) 2023 IETF Trust and the persons identified as the
@@ -60,38 +71,48 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction
-     1.1.  Conventions and Definitions
-   2.  The Restatement Anti-Pattern
-   3.  Reasons for making restatements
-     3.1.  Integrating a Complicated Base Standard Ecosystem
-     3.2.  Trying to be a Textbook for the Implementer
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     1.1.  Conventions and Definitions . . . . . . . . . . . . . . .   3
+   2.  The Restatement Anti-Pattern  . . . . . . . . . . . . . . . .   3
+   3.  Reasons for making restatements . . . . . . . . . . . . . . .   4
+     3.1.  Integrating a Complicated Base Standard Ecosystem . . . .   4
+     3.2.  Trying to be a Textbook for the Implementer . . . . . . .   4
      3.3.  Increasing Availability from a Source with Restricted
-           Access
-     3.4.  Trying to Raise Attention to a Detail Deemed Surprising
-     3.5.  Bad formal description techniques
-   4.  Perils of restatements
-   5.  Defusing restatements
-     5.1.  Summary of Recommendations
-   6.  Examples
-     6.1.  Example: Web linking RFC8288
-     6.2.  Example: Restatement of ISO8601:1988 in RFC3339
-     6.3.  Example: Date-Time in YANG (RFC6991)
-     6.4.  Example: ACME for Subdomains (RFC9444-to-be)
-     6.5.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
-   7.  Security Considerations
-   8.  IANA Considerations
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
-   Acknowledgments
-   Author's Address
+           Access  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     3.4.  Trying to Raise Attention to a Detail Deemed
+           Surprising  . . . . . . . . . . . . . . . . . . . . . . .   5
+     3.5.  Bad formal description techniques . . . . . . . . . . . .   5
+   4.  Perils of restatements  . . . . . . . . . . . . . . . . . . .   5
+   5.  Defusing restatements . . . . . . . . . . . . . . . . . . . .   6
+     5.1.  Summary of Recommendations  . . . . . . . . . . . . . . .   7
+   6.  Examples  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     6.1.  Example: Web linking RFC8288  . . . . . . . . . . . . . .   8
+     6.2.  Example: Restatement of ISO8601:1988 in RFC3339 . . . . .   9
+     6.3.  Example: Date-Time in YANG (RFC6991)  . . . . . . . . . .  10
+     6.4.  Example: ACME for Subdomains (RFC9444-to-be)  . . . . . .  10
+     6.5.  Example: Base64 Encoding variants in
+           draft-ietf-rats-eat-20  . . . . . . . . . . . . . . . . .  11
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  11
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  12
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  12
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .  12
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .  12
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  15
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  15
 
 1.  Introduction
 
    Normative documents that cite other normative documents often
    _restate_ normative content extracted out of the cited document in
    their own words.
+
+
+
+
+Bormann                  Expires 24 January 2024                [Page 2]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
 
    The present memo explains why this can be an Antipattern
    [KOENIG][ANTIPATTERN], and how it can be mitigated.
@@ -141,6 +162,14 @@ Table of Contents
    pointing to an entire document where only a specific passage is
    actually intended to be referenced.
 
+
+
+
+Bormann                  Expires 24 January 2024                [Page 3]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    Restatements can be entirely _hidden_, i.e., there is no indication
    that information given is a restatement.  Restatements can also be
    _explicit_ by clearly being identified as such, typically no longer
@@ -187,6 +216,15 @@ Table of Contents
    such as membership in an organization or payment of a non-trivial
    fee.  It may be appropriate to restate information from such a source
    so the referencing document becomes useful.
+
+
+
+
+
+Bormann                  Expires 24 January 2024                [Page 4]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
 
 3.4.  Trying to Raise Attention to a Detail Deemed Surprising
 
@@ -237,6 +275,13 @@ Table of Contents
    problematic with abridged statements, where this rule may be invoked
    by the reader without an author being aware of it.
 
+
+
+Bormann                  Expires 24 January 2024                [Page 5]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    Restatements may be slightly _semantically different_ from the cited
    document, in particular if the latter is based on a relatively
    inaccessible (possibly poorly documented or poorly developed)
@@ -283,6 +328,15 @@ Table of Contents
    made by this document, employing [RFC2119] keywords as an instruction
    to the potential implementers of this document, i.e., document
    authors and reviewers.
+
+
+
+
+
+Bormann                  Expires 24 January 2024                [Page 6]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
 
    Much of the danger of restatements can be averted if they are
    sufficiently identified by the authors as such.
@@ -332,6 +386,14 @@ Table of Contents
    (...Add nice checklist text for authors and reviewers based on
    Section 5 later...)
 
+
+
+
+Bormann                  Expires 24 January 2024                [Page 7]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
 6.  Examples
 
 6.1.  Example: Web linking [RFC8288]
@@ -380,6 +442,14 @@ Table of Contents
    Section 3 of [RFC8288] finally repairs this:
 
    |     link-param = token BWS [ "=" BWS ( token / quoted-string ) ]
+
+
+
+Bormann                  Expires 24 January 2024                [Page 8]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    |  
    |  Note that any link-param can be generated with values using either
    |  the token or the quoted-string syntax; therefore, recipients MUST
@@ -428,6 +498,14 @@ Table of Contents
    to the semantics of [ISO8601:1988], the precedence remained unclear.
    Implementers of Internet-related standards largely ignored the
    additional semantics of that extension anyway, while implementers of
+
+
+
+Bormann                  Expires 24 January 2024                [Page 9]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    [ISO8601:1988] in general often performed input validation that made
    sure the extension made by [RFC3339] wouldn't work.  (This is only
    now being addressed by Section 2 of
@@ -476,6 +554,14 @@ Table of Contents
       content without warning (and leads the reader astray by actually
       referencing RFC 8555).
 
+
+
+
+Bormann                  Expires 24 January 2024               [Page 10]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    (These problems were addressed in a later draft of RFC9444-to-be.)
 
 6.5.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
@@ -522,6 +608,15 @@ Table of Contents
    memo is about.  The fact that security considerations sections are
    often heavily fleshed out during IESG processing can exacerbate the
    problem.
+
+
+
+
+
+Bormann                  Expires 24 January 2024               [Page 11]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
 
 8.  IANA Considerations
 
@@ -570,6 +665,15 @@ Table of Contents
               2023, <https://datatracker.ietf.org/doc/html/draft-ietf-
               rats-eat-20>.
 
+
+
+
+
+Bormann                  Expires 24 January 2024               [Page 12]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
    [I-D.ietf-netmod-rfc6991-bis]
               Schönwälder, J., "Common YANG Data Types", Work in
               Progress, Internet-Draft, draft-ietf-netmod-rfc6991-bis-
@@ -616,6 +720,15 @@ Table of Contents
    [RFC3339]  Klyne, G. and C. Newman, "Date and Time on the Internet:
               Timestamps", RFC 3339, DOI 10.17487/RFC3339, July 2002,
               <https://www.rfc-editor.org/rfc/rfc3339>.
+
+
+
+
+
+Bormann                  Expires 24 January 2024               [Page 13]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
 
    [RFC3552]  Rescorla, E. and B. Korver, "Guidelines for Writing RFC
               Text on Security Considerations", BCP 72, RFC 3552,
@@ -666,6 +779,13 @@ Table of Contents
               21 July 2023, <https://en.wikipedia.org/w/
               index.php?title=Anti-pattern&oldid=1144938932>.
 
+
+
+Bormann                  Expires 24 January 2024               [Page 14]
+
+Internet-Draft        The Restatement Anti-Pattern             July 2023
+
+
 Acknowledgments
 
    Julian Reschke opened the author's eyes to the fundamental problem of
@@ -683,3 +803,38 @@ Author's Address
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                  Expires 24 January 2024               [Page 15]
