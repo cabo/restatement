@@ -372,7 +372,7 @@ A link can have zero of more `link-param` parameters, each of which
 has the form (simplified):
 
 ~~~ abnf
-link-extension = ( parmname [ "=" ( ptoken | quoted-string ) ] )
+link-extension = parmname [ "=" ( ptoken / quoted-string ) ]
 ~~~
 
 So link-extensions can always be written as a `quoted-string`, or,
@@ -385,16 +385,16 @@ these link parameters needs to _restate_ the ABNF
 for link parameters in their common syntax (simplified):
 
 ~~~ abnf
-link-param  = ( ( "rel" "=" relation-types )
-              | ( "anchor" "=" <"> URI-Reference <"> )
-              | ( "rev" "=" relation-types )
-              | ( "hreflang" "=" Language-Tag )
-              | ( "media" "=" ( MediaDesc | ( <"> MediaDesc <"> ) ) )
-              | ( "title" "=" quoted-string )
-              | ( "type" "=" ( media-type | quoted-mt ) )
+link-param  = ( "rel" "=" relation-types )
+            / ( "anchor" "=" <"> URI-Reference <"> )
+            / ( "rev" "=" relation-types )
+            / ( "hreflang" "=" Language-Tag )
+            / ( "media" "=" ( MediaDesc / ( <"> MediaDesc <"> ) ) )
+            / ( "title" "=" quoted-string )
+            / ( "type" "=" ( media-type / quoted-mt ) )
 ~~~
 
-This restatement loses the choice between `ptoken` and `quoted-string` for
+This restatement loses the intended choice between `ptoken` and `quoted-string` for
 many predefined link parameters, only keeping it for `"media"` and
 `"type"` (and `"rel"` in the definition of `relation-types`, which is
 arguably faulty by allowing non-ptoken characters in an unquoted URI).
@@ -432,11 +432,11 @@ Unfortunately, {{RFC6690}} adds an external restatement copying from
 {{RFC5988}} in defining a few more link-params (simplified):
 
 ~~~ abnf
-link-param     = ( ( "rel" "=" relation-types )  ; ...
-                 / ( "type" "=" ( media-type / quoted-mt ) )
-                 / ( "rt" "=" relation-types )
-                 / ( "if" "=" relation-types )
-                 / ( "sz" "=" cardinal )
+link-param     = ( "rel" "=" relation-types )  ; ...
+               / ( "type" "=" ( media-type / quoted-mt ) )
+               / ( "rt" "=" relation-types )
+               / ( "if" "=" relation-types )
+               / ( "sz" "=" cardinal )
 cardinal       = "0" / ( %x31-39 *DIGIT )
 ~~~
 
@@ -534,8 +534,7 @@ text cause a problem {{rats-comment}}:
 > restatement is very misleading as it strongly implies RFC 7515 is
 > *not* used here; the reference needs to be removed.  In the other
 > places I find the term is simply used, which assumes the reader
-> will think to look up the term in the terminology and make the
-> match with the different term.  \[...]
+> will think to look up the term in the terminology \[...]
 
 (The problem in the draft was quickly addressed in the next revision.)
 
