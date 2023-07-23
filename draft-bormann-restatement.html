@@ -1054,7 +1054,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 23 January 2024</td>
+<td class="center">Expires 24 January 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-bormann-restatement-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-07-22" class="published">22 July 2023</time>
+<time datetime="2023-07-23" class="published">23 July 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-01-23">23 January 2024</time></dd>
+<dd class="expires"><time datetime="2024-01-24">24 January 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1120,7 +1120,7 @@ how it can be mitigated.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 23 January 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 24 January 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1527,7 +1527,7 @@ A link can have zero of more <code>link-param</code> parameters, each of which
 has the form (simplified):<a href="#section-6.1-2" class="pilcrow">¶</a></p>
 <div class="lang-abnf sourcecode" id="section-6.1-3">
 <pre>
-link-extension = ( parmname [ "=" ( ptoken | quoted-string ) ] )
+link-extension = parmname [ "=" ( ptoken / quoted-string ) ]
 </pre><a href="#section-6.1-3" class="pilcrow">¶</a>
 </div>
 <p id="section-6.1-4">So link-extensions can always be written as a <code>quoted-string</code>, or,
@@ -1539,16 +1539,16 @@ these link parameters needs to <em>restate</em> the ABNF
 for link parameters in their common syntax (simplified):<a href="#section-6.1-5" class="pilcrow">¶</a></p>
 <div class="lang-abnf sourcecode" id="section-6.1-6">
 <pre>
-link-param  = ( ( "rel" "=" relation-types )
-              | ( "anchor" "=" &lt;"&gt; URI-Reference &lt;"&gt; )
-              | ( "rev" "=" relation-types )
-              | ( "hreflang" "=" Language-Tag )
-              | ( "media" "=" ( MediaDesc | ( &lt;"&gt; MediaDesc &lt;"&gt; ) ) )
-              | ( "title" "=" quoted-string )
-              | ( "type" "=" ( media-type | quoted-mt ) )
+link-param  = ( "rel" "=" relation-types )
+            / ( "anchor" "=" &lt;"&gt; URI-Reference &lt;"&gt; )
+            / ( "rev" "=" relation-types )
+            / ( "hreflang" "=" Language-Tag )
+            / ( "media" "=" ( MediaDesc / ( &lt;"&gt; MediaDesc &lt;"&gt; ) ) )
+            / ( "title" "=" quoted-string )
+            / ( "type" "=" ( media-type / quoted-mt ) )
 </pre><a href="#section-6.1-6" class="pilcrow">¶</a>
 </div>
-<p id="section-6.1-7">This restatement loses the choice between <code>ptoken</code> and <code>quoted-string</code> for
+<p id="section-6.1-7">This restatement loses the intended choice between <code>ptoken</code> and <code>quoted-string</code> for
 many predefined link parameters, only keeping it for <code>"media"</code> and
 <code>"type"</code> (and <code>"rel"</code> in the definition of <code>relation-types</code>, which is
 arguably faulty by allowing non-ptoken characters in an unquoted URI).<a href="#section-6.1-7" class="pilcrow">¶</a></p>
@@ -1587,11 +1587,11 @@ x="y"
 <span>[<a href="#RFC5988" class="cite xref">RFC5988</a>]</span> in defining a few more link-params (simplified):<a href="#section-6.1-11" class="pilcrow">¶</a></p>
 <div class="lang-abnf sourcecode" id="section-6.1-12">
 <pre>
-link-param     = ( ( "rel" "=" relation-types )  ; ...
-                 / ( "type" "=" ( media-type / quoted-mt ) )
-                 / ( "rt" "=" relation-types )
-                 / ( "if" "=" relation-types )
-                 / ( "sz" "=" cardinal )
+link-param     = ( "rel" "=" relation-types )  ; ...
+               / ( "type" "=" ( media-type / quoted-mt ) )
+               / ( "rt" "=" relation-types )
+               / ( "if" "=" relation-types )
+               / ( "sz" "=" cardinal )
 cardinal       = "0" / ( %x31-39 *DIGIT )
 </pre><a href="#section-6.1-12" class="pilcrow">¶</a>
 </div>
@@ -1700,8 +1700,7 @@ the reference to RFC 7515 and the text required with that.  This
 restatement is very misleading as it strongly implies RFC 7515 is
 <em>not</em> used here; the reference needs to be removed.  In the other
 places I find the term is simply used, which assumes the reader
-will think to look up the term in the terminology and make the
-match with the different term.  [...]<a href="#section-6.5-4.1" class="pilcrow">¶</a></p>
+will think to look up the term in the terminology [...]<a href="#section-6.5-4.1" class="pilcrow">¶</a></p>
 </blockquote>
 <p id="section-6.5-5">(The problem in the draft was quickly addressed in the next revision.)<a href="#section-6.5-5" class="pilcrow">¶</a></p>
 </section>
