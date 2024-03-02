@@ -63,6 +63,7 @@ informative:
   RFC4648:
   RFC7515:
   RFC6991:
+  RFC9444:
   I-D.ietf-netmod-rfc6991-bis:
   RFC3339:
   I-D.ietf-sedate-datetime-extended: sedate
@@ -135,7 +136,7 @@ informative:
 
 ## Conventions and Definitions
 
-{::boilerplate bcp14info-tagged}
+{::boilerplate bcp14info-tagged-bcp}
 
 # The Restatement Anti-Pattern
 
@@ -225,7 +226,7 @@ reader to a detail of the cited document that might seem unintuitive
 more familiar to readers of the referencing document, this alert can
 be more useful.
 
-## Bad formal description techniques
+## Limitations in Formal Description Techniques
 
 Formal description techniques (_FDT_, such as ABNF) are usually designed to
 document a single specific artifact, not its evolution or its
@@ -319,7 +320,8 @@ sufficiently identified by the authors as such.
 
 - For identification of internal restatements, use phrases such as:
   In other words, hence, in particular, as discussed in Section NN.
-- For identification of external restatements: As described/defined in …
+- For identification of external restatements: As described/defined in
+  …, as per …
 - In both cases, make sure that any local reference is clear and any
   non-local reference is resolvable and well-scoped.
 - Rephrasing the statement as a Note can make clear that there is no
@@ -479,7 +481,7 @@ much harder to discuss.
 
 ## Example: ACME for Subdomains (RFC9444-to-be) {#example-9444}
 
-RFC9444-to-be defines a new feature added to {{RFC8555}}, referencing
+A late draft of what became {{RFC9444}} defines a new feature added to {{RFC8555}}, referencing
 the base standard in a number of places.
 
 Reviewing the draft {{I-D.draft-ietf-acme-subdomains-04}}, {{acme-comment}} states:
@@ -506,7 +508,7 @@ Reviewing the draft {{I-D.draft-ietf-acme-subdomains-04}}, {{acme-comment}} stat
 > section 4.1 introduces new normative content without warning (and
 > leads the reader astray by actually referencing RFC 8555).
 
-(These problems were addressed in a later draft of RFC9444-to-be.)
+(These problems were ultimately addressed in {{RFC9444}}.)
 
 
 ## Example: Base64 Encoding variants in draft-ietf-rats-eat-20 {#example-eat}
@@ -547,7 +549,7 @@ Security considerations sections have turned out to be an attractor
 for such problems.
 They are meant "both to encourage document authors to consider
 security in their designs and to inform the reader of relevant
-security issues" {{Section 1 of -seccons}}.
+security issues" ({{Section 1 of -seccons}}).
 In practice, they tend to be the first point in a document that
 security issues are considered at all, so they often both contain
 normative statements that are nowhere else in the document and
