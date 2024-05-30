@@ -1,0 +1,71 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2024-05-30T01:20:35.234351+00:00",
+  "repo": "cabo/restatement",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOJ9DSK85sUY9i",
+      "title": "Is the term \"anti-pattern\" too confusing to some IETFers?",
+      "url": "https://github.com/cabo/restatement/issues/1",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "\r\n> One thing is I was surprised when working on RFC8995 was that the words\r\n\"Anti-Pattern\" were not that well known in the IETF.\r\n\r\n> I can't recall hearing \"anti-pattern\" used in this way before and think it is a confusing term we should avoid. The meaning of the \"anti-\" as being opposed to something else is well known, as in antidisestablishmentarianism (or preceding it as in antediluvian). So I think someone seeing this for the first time will assume it means something opposed to having a pattern, i.e., chaos. Seems like it would be better to use something like \"bad pattern\" or, in this case, \"malpractice\", I suggest changing the draft title to \"The Restatement Malpractice\" as something the more people will easily understand.\r\n\r\n> We aren't making the term \"anti-pattern\" up - it's been in the wild for a _long_ time now.\r\n\r\n> What really draws me to this concept and the word expressing it is the rather sharp definition (Wikipedia again):\r\n>\r\n>\t\u2022 The anti-pattern is a commonly-used process, structure or pattern of action that, despite initially appearing to be an appropriate and effective response to a problem, has more bad consequences than good ones.\r\n>\r\n> Words like \u201cmalpractice\u201d don\u2019t quite capture this rich meaning.\r\n\r\nsnippets from rfcinterest mailing list, thread <https://mailarchive.ietf.org/arch/msg/rfc-interest/fFxkiLpLohQABQH7NIxrCR5bjdM>",
+      "createdAt": "2023-07-23T20:21:07Z",
+      "updatedAt": "2023-07-23T20:21:07Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": []
+}
