@@ -56,6 +56,7 @@ informative:
     rc: search result
   RFC9399:
 # Examples:
+  STD68: abnf
   RFC5988:
   RFC6690:
   RFC8288:
@@ -66,7 +67,7 @@ informative:
   RFC9444:
   I-D.ietf-netmod-rfc6991-bis:
   RFC3339:
-  I-D.ietf-sedate-datetime-extended: sedate
+  RFC9557: sedate
   I-D.draft-ietf-rats-eat-20:
   rats-comment:
     target: https://mailarchive.ietf.org/arch/msg/rats/H8qXwQywD0W6x4QcC9Iwd5LYl2s
@@ -228,7 +229,7 @@ be more useful.
 
 ## Limitations in Formal Description Techniques
 
-Formal description techniques (_FDT_, such as ABNF) are usually designed to
+Formal description techniques (_FDT_, such as ABNF {{STD68}}) are usually designed to
 document a single specific artifact, not its evolution or its
 embedding into another artifact.  This can lead to wholesale imports
 of FDT material, without indication whether just the FDT was imported
@@ -471,8 +472,7 @@ the extension made by {{RFC3339}} wouldn't work.
 {{RFC6991}} defines a YANG type `date-and-time` on page 11, restating
 parts of {{RFC3339}} (the restatement is also faulty in its item (b), with an
 attempted cleanup in {{I-D.ietf-netmod-rfc6991-bis}}).
-Now that {{RFC3339}} is being bug-fixed via {{Section 2 of
-I-D.ietf-sedate-datetime-extended}}, it is not clear whether the change
+Now that {{RFC3339}} is being bug-fixed via {{Section 2 of -sedate}}, it is not clear whether the change
 applies to the YANG type as well.
 This is more of a problem for YANG than it might be otherwise, as it might trigger
 the YANG concept of a "non-backwards-compatible" change to that
