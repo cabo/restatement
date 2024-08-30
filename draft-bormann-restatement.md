@@ -137,7 +137,7 @@ informative:
 
 ## Conventions and Definitions
 
-{::boilerplate bcp14info-tagged-bcp}
+{::boilerplate bcp14info-tagged-bcp14}
 
 # The Restatement Anti-Pattern
 
@@ -233,6 +233,7 @@ Formal description techniques (_FDT_, such as ABNF {{STD68}}) are usually design
 document a single specific artifact, not its evolution or its
 embedding into another artifact.  This can lead to wholesale imports
 of FDT material, without indication whether just the FDT was imported
+(and which part of it)
 or whether the importing document is intended to evolve with the donor
 document.
 See {{example-8288}} and {{example-6991}} for additional illustration of
@@ -254,7 +255,8 @@ ecosystem_, i.e., an implementation of the cited document cannot be
 used because it makes additional constraints that are not meant to be
 included in the referencing document.
 (This peril of course is also present with _intentional_ changes to
-the normative statements in a cited document, but is likely to receive
+the normative statements in a cited document, which are however likely
+to receive
 much more attention during review.)
 
 {{example-eat}} presents an example for the situation where a reader
@@ -479,7 +481,7 @@ the YANG concept of a "non-backwards-compatible" change to that
 datatype — a problem that is not entirely *caused* by restatements but gets
 much harder to discuss.
 
-## Example: ACME for Subdomains (RFC9444-to-be) {#example-9444}
+## Example: ACME for Subdomains (RFC9444) {#example-9444}
 
 A late draft of what became {{RFC9444}} defines a new feature added to {{RFC8555}}, referencing
 the base standard in a number of places.
