@@ -7,6 +7,7 @@ This is the working area for the individual Internet-Draft, "The Restatement Ant
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-bormann-restatement)
 * [Compare Editor's Copy to Individual Draft](https://cabo.github.io/restatement/#go.draft-bormann-restatement.diff)
 
+[Access all branches](https://cabo.github.io/restatement/)
 
 ## Contributing
 
