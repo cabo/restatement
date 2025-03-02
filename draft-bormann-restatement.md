@@ -529,7 +529,7 @@ the term "Base64url Encoding”, referencing {{RFC4648}} as well as
 characters).
 
 While this was a good start, incomplete restatements in the following
-text cause a problem {{rats-comment}}:
+text cause a problem, as detailed in {{rats-comment}}:
 
 {:quote}
 > A term "base64url encoded” \[...] is used in multiple places.  One of the
