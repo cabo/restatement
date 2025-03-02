@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                            30 August 2024
-Expires: 3 March 2025
+Intended status: Informational                              2 March 2025
+Expires: 3 September 2025
 
 
                       The Restatement Anti-Pattern
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 March 2025.
+   This Internet-Draft will expire on 3 September 2025.
 
 
 
@@ -53,14 +53,14 @@ Status of This Memo
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 1]
+Bormann                 Expires 3 September 2025                [Page 1]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 2]
+Bormann                 Expires 3 September 2025                [Page 2]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    The present memo explains why this can be an Antipattern
@@ -165,9 +165,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 3]
+Bormann                 Expires 3 September 2025                [Page 3]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    Restatements can be entirely _hidden_, i.e., there is no indication
@@ -221,9 +221,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 4]
+Bormann                 Expires 3 September 2025                [Page 4]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 3.4.  Trying to Raise Attention to a Detail Deemed Surprising
@@ -277,9 +277,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 5]
+Bormann                 Expires 3 September 2025                [Page 5]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    which states that the reader is to presume that expressly referencing
@@ -333,9 +333,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 6]
+Bormann                 Expires 3 September 2025                [Page 6]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    The rest of this section provides a summary of the recommendations
@@ -389,9 +389,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 7]
+Bormann                 Expires 3 September 2025                [Page 7]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 5.1.  Summary of Recommendations
@@ -445,9 +445,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 8]
+Bormann                 Expires 3 September 2025                [Page 8]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    One could say that this restatement was caused by a limitation of
@@ -501,9 +501,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                  [Page 9]
+Bormann                 Expires 3 September 2025                [Page 9]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 6.2.  Example: Restatement of [ISO8601:1988] in [RFC3339]
@@ -557,9 +557,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                 [Page 10]
+Bormann                 Expires 3 September 2025               [Page 10]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
       (The first paragraph of section 4 repeats the last paragraph of
@@ -587,7 +587,7 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
    would be default, no extra characters).
 
    While this was a good start, incomplete restatements in the following
-   text cause a problem [rats-comment]:
+   text cause a problem, as detailed in [rats-comment]:
 
    |  A term "base64url encoded” [...] is used in multiple places.  One
    |  of the places restates its own reference to RFC 4648, but doesn’t
@@ -613,9 +613,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                 [Page 11]
+Bormann                 Expires 3 September 2025               [Page 11]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    both contain normative statements that are nowhere else in the
@@ -669,9 +669,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
 
 
 
-Bormann                   Expires 3 March 2025                 [Page 12]
+Bormann                 Expires 3 September 2025               [Page 12]
 
-Internet-Draft        The Restatement Anti-Pattern           August 2024
+Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
    [I-D.draft-ietf-acme-subdomains-04]
@@ -691,8 +691,9 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
    [I-D.ietf-netmod-rfc6991-bis]
               Schönwälder, J., "Common YANG Data Types", Work in
               Progress, Internet-Draft, draft-ietf-netmod-rfc6991-bis-
-              16, 7 August 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-netmod-rfc6991-bis-16>.
+              17, 21 October 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
+              rfc6991-bis-17>.
 
    [ISO8601:1988]
               ISO, "Data elements and interchange formats — Information
@@ -719,16 +720,19 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
               <https://mailarchive.ietf.org/arch/msg/rats/
               H8qXwQywD0W6x4QcC9Iwd5LYl2s>.
 
+
+
+
+
+
+Bormann                 Expires 3 September 2025               [Page 13]
+
+Internet-Draft        The Restatement Anti-Pattern            March 2025
+
+
    [RFC2397]  Masinter, L., "The "data" URL scheme", RFC 2397,
               DOI 10.17487/RFC2397, August 1998,
               <https://www.rfc-editor.org/rfc/rfc2397>.
-
-
-
-Bormann                   Expires 3 March 2025                 [Page 13]
-
-Internet-Draft        The Restatement Anti-Pattern           August 2024
-
 
    [RFC3339]  Klyne, G. and C. Newman, "Date and Time on the Internet:
               Timestamps", RFC 3339, DOI 10.17487/RFC3339, July 2002,
@@ -773,18 +777,19 @@ Internet-Draft        The Restatement Anti-Pattern           August 2024
               (ACME)", RFC 8555, DOI 10.17487/RFC8555, March 2019,
               <https://www.rfc-editor.org/rfc/rfc8555>.
 
+
+
+
+
+Bormann                 Expires 3 September 2025               [Page 14]
+
+Internet-Draft        The Restatement Anti-Pattern            March 2025
+
+
    [RFC9399]  Santesson, S., Housley, R., Freeman, T., and L. Rosenthol,
               "Internet X.509 Public Key Infrastructure: Logotypes in
               X.509 Certificates", RFC 9399, DOI 10.17487/RFC9399, May
               2023, <https://www.rfc-editor.org/rfc/rfc9399>.
-
-
-
-
-Bormann                   Expires 3 March 2025                 [Page 14]
-
-Internet-Draft        The Restatement Anti-Pattern           August 2024
-
 
    [RFC9444]  Friel, O., Barnes, R., Hollebeek, T., and M. Richardson,
               "Automated Certificate Management Environment (ACME) for
@@ -832,9 +837,4 @@ Author's Address
 
 
 
-
-
-
-
-
-Bormann                   Expires 3 March 2025                 [Page 15]
+Bormann                 Expires 3 September 2025               [Page 15]
