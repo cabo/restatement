@@ -542,7 +542,8 @@ text cause a problem, as detailed in {{rats-comment}}:
 > places I find the term is simply used, which assumes the reader
 > will think to look up the term in the terminology \[...]
 
-(The problem in the draft was quickly addressed in the next revision.)
+(The problem in the draft was quickly addressed in the next revision;
+with these fixes the draft has now turned into a published RFC {{RFC9711}}.)
 
 # Security Considerations
 
