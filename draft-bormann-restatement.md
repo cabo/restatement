@@ -41,13 +41,13 @@ informative:
   ANTIPATTERN:
     target: http://wiki.c2.com/?AntiPattern
     title: Anti Pattern
-    rc: C2 Wiki (Last edited:)
+    rc: C2 Wiki (at the time of writing, last edited:)
     date: 2012-11-21
   WP-ANTIPATTERN:
-    target: https://en.wikipedia.org/w/index.php?title=Anti-pattern&oldid=1144938932
+    target: https://en.wikipedia.org/w/index.php?title=Anti-pattern&oldid=1296568489
     title: Anti-pattern
     rc: Wikipedia page (at the time of writing:)
-    date: 2023-07-21
+    date: 2025-06-20
   RFC3552: seccons
   RFC2397:
   errata2397:
@@ -69,12 +69,14 @@ informative:
   RFC3339:
   RFC9557: sedate
   I-D.draft-ietf-rats-eat-20:
+  RFC9711: eat
   rats-comment:
     target: https://mailarchive.ietf.org/arch/msg/rats/H8qXwQywD0W6x4QcC9Iwd5LYl2s
     title: >
       Re: [Rats] I-D Action: draft-ietf-rats-eat-20.txt
     author:
       name: Carsten Bormann
+    date: 17 June 2023
   RFC8555:
   I-D.draft-ietf-acme-subdomains-04:
   acme-comment:
