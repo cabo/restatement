@@ -73,7 +73,7 @@ informative:
     ann: >
       This specification is obsoleted by [RFC9911].
   RFC9444:
-  RFC9911: rfc6991-bis
+  RFC9911:
   RFC3339:
   RFC9557: sedate
   I-D.draft-ietf-rats-eat-20:
@@ -487,7 +487,7 @@ the extension made by {{RFC3339}} wouldn't work.
 
 {{RFC6991}} defines a YANG type `date-and-time` on page 11, restating
 parts of {{RFC3339}} (the restatement is also faulty in its item (b),
-with some cleanup in {{-rfc6991-bis}}).
+with some cleanup in {{RFC9911}}).
 Now that {{RFC3339}} is being bug-fixed via {{Section 2 of -sedate}}, it
 is not clear whether the change applies to the YANG type as well.
 This is more of a problem for YANG than it might be otherwise, as it might trigger
