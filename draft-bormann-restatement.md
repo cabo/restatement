@@ -372,10 +372,12 @@ This can be somewhat mitigated by clearly stating the purpose of a
 restatement, and the intended result when the restatement and the
 original diverge.
 
+<!-- 
 ## Summary of Recommendations
 
 (...Add nice checklist text for authors and reviewers based on {{defuse}} later...)
-
+ -->
+ 
 # Examples
 
 ## Example: Web linking {{RFC8288}} {#example-8288}
@@ -484,10 +486,10 @@ the extension made by {{RFC3339}} wouldn't work.
 ## Example: Date-Time in YANG (RFC6991) {#example-6991}
 
 {{RFC6991}} defines a YANG type `date-and-time` on page 11, restating
-parts of {{RFC3339}} (the restatement is also faulty in its item (b), with an
-attempted cleanup in {{I-D.ietf-netmod-rfc6991-bis}}).
-Now that {{RFC3339}} is being bug-fixed via {{Section 2 of -sedate}}, it is not clear whether the change
-applies to the YANG type as well.
+parts of {{RFC3339}} (the restatement is also faulty in its item (b),
+with some cleanup in {{-rfc6991-bis}}).
+Now that {{RFC3339}} is being bug-fixed via {{Section 2 of -sedate}}, it
+is not clear whether the change applies to the YANG type as well.
 This is more of a problem for YANG than it might be otherwise, as it might trigger
 the YANG concept of a "non-backwards-compatible" change to that
 datatype — a problem that is not entirely *caused* by restatements but gets
