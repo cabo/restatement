@@ -4,8 +4,8 @@
 
 Network Working Group                                         C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                              2 March 2025
-Expires: 3 September 2025
+Intended status: Informational                          24 February 2026
+Expires: 28 August 2026
 
 
                       The Restatement Anti-Pattern
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2025.
+   This Internet-Draft will expire on 28 August 2026.
 
 
 
@@ -53,14 +53,14 @@ Status of This Memo
 
 
 
-Bormann                 Expires 3 September 2025                [Page 1]
+Bormann                  Expires 28 August 2026                 [Page 1]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -84,10 +84,9 @@ Table of Contents
      3.5.  Limitations in Formal Description Techniques  . . . . . .   5
    4.  Perils of restatements  . . . . . . . . . . . . . . . . . . .   5
    5.  Defusing restatements . . . . . . . . . . . . . . . . . . . .   6
-     5.1.  Summary of Recommendations  . . . . . . . . . . . . . . .   8
    6.  Examples  . . . . . . . . . . . . . . . . . . . . . . . . . .   8
      6.1.  Example: Web linking RFC8288  . . . . . . . . . . . . . .   8
-     6.2.  Example: Restatement of ISO8601:1988 in RFC3339 . . . . .  10
+     6.2.  Example: Restatement of ISO8601:1988 in RFC3339 . . . . .   9
      6.3.  Example: Date-Time in YANG (RFC6991)  . . . . . . . . . .  10
      6.4.  Example: ACME for Subdomains (RFC9444)  . . . . . . . . .  10
      6.5.  Example: Base64 Encoding variants in
@@ -109,9 +108,10 @@ Table of Contents
 
 
 
-Bormann                 Expires 3 September 2025                [Page 2]
+
+Bormann                  Expires 28 August 2026                 [Page 2]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
    The present memo explains why this can be an Antipattern
@@ -165,9 +165,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 
-Bormann                 Expires 3 September 2025                [Page 3]
+Bormann                  Expires 28 August 2026                 [Page 3]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
    Restatements can be entirely _hidden_, i.e., there is no indication
@@ -221,9 +221,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 
-Bormann                 Expires 3 September 2025                [Page 4]
+Bormann                  Expires 28 August 2026                 [Page 4]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
 3.4.  Trying to Raise Attention to a Detail Deemed Surprising
@@ -277,9 +277,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 
-Bormann                 Expires 3 September 2025                [Page 5]
+Bormann                  Expires 28 August 2026                 [Page 5]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
    which states that the reader is to presume that expressly referencing
@@ -333,9 +333,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 
-Bormann                 Expires 3 September 2025                [Page 6]
+Bormann                  Expires 28 August 2026                 [Page 6]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
 
    The rest of this section provides a summary of the recommendations
@@ -389,15 +389,10 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
 
 
-Bormann                 Expires 3 September 2025                [Page 7]
+Bormann                  Expires 28 August 2026                 [Page 7]
 
-Internet-Draft        The Restatement Anti-Pattern            March 2025
+Internet-Draft        The Restatement Anti-Pattern         February 2026
 
-
-5.1.  Summary of Recommendations
-
-   (...Add nice checklist text for authors and reviewers based on
-   Section 5 later...)
 
 6.  Examples
 
@@ -436,20 +431,6 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    which is arguably faulty by allowing non-ptoken characters in an
    unquoted URI).
 
-
-
-
-
-
-
-
-
-
-Bormann                 Expires 3 September 2025                [Page 8]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
-
    One could say that this restatement was caused by a limitation of
    ABNF: ABNF cannot separately express both the overall syntax of link-
    params (which yields the link-param value)) and the specific syntax
@@ -461,6 +442,14 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    Section 3 of [RFC8288] finally repairs this:
 
    |     link-param = token BWS [ "=" BWS ( token / quoted-string ) ]
+
+
+
+Bormann                  Expires 28 August 2026                 [Page 8]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
+
    |  
    |  Note that any link-param can be generated with values using either
    |  the token or the quoted-string syntax; therefore, recipients MUST
@@ -499,13 +488,6 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    *  the ABNF in [RFC6690] would need to be rewritten to apply the rule
       cardinal to the extracted value of the link-param.
 
-
-
-Bormann                 Expires 3 September 2025                [Page 9]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
-
 6.2.  Example: Restatement of [ISO8601:1988] in [RFC3339]
 
    [RFC3339] was largely intended as a freely available restatement of
@@ -516,6 +498,14 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    to the semantics of [ISO8601:1988], the precedence remained unclear.
    Implementers of Internet-related standards largely ignored the
    additional semantics of that extension anyway, while implementers of
+
+
+
+Bormann                  Expires 28 August 2026                 [Page 9]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
+
    [ISO8601:1988] in general often performed input validation that made
    sure the extension made by [RFC3339] wouldn't work.  (This is only
    now being addressed by Section 2 of [RFC9557].)
@@ -524,13 +514,13 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
    [RFC6991] defines a YANG type date-and-time on page 11, restating
    parts of [RFC3339] (the restatement is also faulty in its item (b),
-   with an attempted cleanup in [I-D.ietf-netmod-rfc6991-bis]).  Now
-   that [RFC3339] is being bug-fixed via Section 2 of [RFC9557], it is
-   not clear whether the change applies to the YANG type as well.  This
-   is more of a problem for YANG than it might be otherwise, as it might
-   trigger the YANG concept of a "non-backwards-compatible" change to
-   that datatype — a problem that is not entirely _caused_ by
-   restatements but gets much harder to discuss.
+   with some cleanup in [RFC9911]).  Now that [RFC3339] is being bug-
+   fixed via Section 2 of [RFC9557], it is not clear whether the change
+   applies to the YANG type as well.  This is more of a problem for YANG
+   than it might be otherwise, as it might trigger the YANG concept of a
+   "non-backwards-compatible" change to that datatype — a problem that
+   is not entirely _caused_ by restatements but gets much harder to
+   discuss.
 
 6.4.  Example: ACME for Subdomains (RFC9444)
 
@@ -554,14 +544,6 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
       (Languagetool diagnoses overuse of passive voice, which
       exacerbates this problem.)
 
-
-
-
-Bormann                 Expires 3 September 2025               [Page 10]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
-
       (The first paragraph of section 4 repeats the last paragraph of
       section 3.  But that is not a problem; redundancy can be good if
       it improves the flow, and this is clearly labeled as a
@@ -571,6 +553,14 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
       referencing RFC 8555).
 
    (These problems were ultimately addressed in [RFC9444].)
+
+
+
+
+Bormann                  Expires 28 August 2026                [Page 10]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
 
 6.5.  Example: Base64 Encoding variants in draft-ietf-rats-eat-20
 
@@ -597,8 +587,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    |  the other places I find the term is simply used, which assumes the
    |  reader will think to look up the term in the terminology [...]
 
-   (The problem in the draft was quickly addressed in the next
-   revision.)
+   (The problem in the draft was quickly addressed in the next revision;
+   with these fixes the draft has now turned into a published RFC
+   [RFC9711].)
 
 7.  Security Considerations
 
@@ -610,20 +601,22 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    to inform the reader of relevant security issues" (Section 1 of
    [RFC3552]).  In practice, they tend to be the first point in a
    document that security issues are considered at all, so they often
-
-
-
-Bormann                 Expires 3 September 2025               [Page 11]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
-
    both contain normative statements that are nowhere else in the
    document and security-conscious restatements of other normative
    statements in the document, the latter with all the perils that this
    memo is about.  The fact that security considerations sections are
    often heavily fleshed out during IESG processing can exacerbate the
    problem.
+
+
+
+
+
+
+Bormann                  Expires 28 August 2026                [Page 11]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
 
 8.  IANA Considerations
 
@@ -655,24 +648,13 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
               v0RYQkByhAII9yvaD6gbKWx0WtA>.
 
    [ANTIPATTERN]
-              "Anti Pattern", C2 Wiki (Last edited:), 21 November 2012,
+              "Anti Pattern", C2 Wiki (at the time of writing, last
+              edited:), 21 November 2012,
               <http://wiki.c2.com/?AntiPattern>.
 
    [errata2397]
               "RFC Errata Report » RFC Editor", search result, n.d.,
               <https://www.rfc-editor.org/errata/rfc2397>.
-
-
-
-
-
-
-
-
-Bormann                 Expires 3 September 2025               [Page 12]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
 
    [I-D.draft-ietf-acme-subdomains-04]
               Friel, O., Barnes, R., Hollebeek, T., and M. Richardson,
@@ -684,16 +666,18 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
    [I-D.draft-ietf-rats-eat-20]
               Lundblade, L., Mandyam, G., O'Donoghue, J., and C.
               Wallace, "The Entity Attestation Token (EAT)", Work in
+
+
+
+Bormann                  Expires 28 August 2026                [Page 12]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
+
               Progress, Internet-Draft, draft-ietf-rats-eat-20, 13 June
               2023, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              rats-eat-20>.
-
-   [I-D.ietf-netmod-rfc6991-bis]
-              Schönwälder, J., "Common YANG Data Types", Work in
-              Progress, Internet-Draft, draft-ietf-netmod-rfc6991-bis-
-              17, 21 October 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc6991-bis-17>.
+              rats-eat-20>.  A revision of this specification was
+              published as [RFC9711].
 
    [ISO8601:1988]
               ISO, "Data elements and interchange formats — Information
@@ -716,19 +700,9 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
    [rats-comment]
               Bormann, C., "Re: [Rats] I-D Action: draft-ietf-rats-eat-
-              20.txt", n.d.,
+              20.txt", June 2023,
               <https://mailarchive.ietf.org/arch/msg/rats/
               H8qXwQywD0W6x4QcC9Iwd5LYl2s>.
-
-
-
-
-
-
-Bormann                 Expires 3 September 2025               [Page 13]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
 
    [RFC2397]  Masinter, L., "The "data" URL scheme", RFC 2397,
               DOI 10.17487/RFC2397, August 1998,
@@ -747,9 +721,19 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
               Encodings", RFC 4648, DOI 10.17487/RFC4648, October 2006,
               <https://www.rfc-editor.org/rfc/rfc4648>.
 
+
+
+
+
+Bormann                  Expires 28 August 2026                [Page 13]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
+
    [RFC5988]  Nottingham, M., "Web Linking", RFC 5988,
               DOI 10.17487/RFC5988, October 2010,
-              <https://www.rfc-editor.org/rfc/rfc5988>.
+              <https://www.rfc-editor.org/rfc/rfc5988>.  This
+              specification is obsoleted by [RFC8288].
 
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
@@ -757,12 +741,14 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
    [RFC6991]  Schoenwaelder, J., Ed., "Common YANG Data Types",
               RFC 6991, DOI 10.17487/RFC6991, July 2013,
-              <https://www.rfc-editor.org/rfc/rfc6991>.
+              <https://www.rfc-editor.org/rfc/rfc6991>.  This
+              specification is obsoleted by [RFC9911].
 
    [RFC7230]  Fielding, R., Ed. and J. Reschke, Ed., "Hypertext Transfer
               Protocol (HTTP/1.1): Message Syntax and Routing",
               RFC 7230, DOI 10.17487/RFC7230, June 2014,
-              <https://www.rfc-editor.org/rfc/rfc7230>.
+              <https://www.rfc-editor.org/rfc/rfc7230>.  This
+              specification is obsoleted by [RFC9110] and [RFC9112].
 
    [RFC7515]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web
               Signature (JWS)", RFC 7515, DOI 10.17487/RFC7515, May
@@ -777,19 +763,28 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
               (ACME)", RFC 8555, DOI 10.17487/RFC8555, March 2019,
               <https://www.rfc-editor.org/rfc/rfc8555>.
 
+   [RFC9110]  Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+              Ed., "HTTP Semantics", STD 97, RFC 9110,
+              DOI 10.17487/RFC9110, June 2022,
+              <https://www.rfc-editor.org/rfc/rfc9110>.
 
-
-
-
-Bormann                 Expires 3 September 2025               [Page 14]
-
-Internet-Draft        The Restatement Anti-Pattern            March 2025
-
+   [RFC9112]  Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+              Ed., "HTTP/1.1", STD 99, RFC 9112, DOI 10.17487/RFC9112,
+              June 2022, <https://www.rfc-editor.org/rfc/rfc9112>.
 
    [RFC9399]  Santesson, S., Housley, R., Freeman, T., and L. Rosenthol,
               "Internet X.509 Public Key Infrastructure: Logotypes in
               X.509 Certificates", RFC 9399, DOI 10.17487/RFC9399, May
               2023, <https://www.rfc-editor.org/rfc/rfc9399>.
+
+
+
+
+
+Bormann                  Expires 28 August 2026                [Page 14]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
 
    [RFC9444]  Friel, O., Barnes, R., Hollebeek, T., and M. Richardson,
               "Automated Certificate Management Environment (ACME) for
@@ -800,6 +795,15 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
               Timestamps with Additional Information", RFC 9557,
               DOI 10.17487/RFC9557, April 2024,
               <https://www.rfc-editor.org/rfc/rfc9557>.
+
+   [RFC9711]  Lundblade, L., Mandyam, G., O'Donoghue, J., and C.
+              Wallace, "The Entity Attestation Token (EAT)", RFC 9711,
+              DOI 10.17487/RFC9711, April 2025,
+              <https://www.rfc-editor.org/rfc/rfc9711>.
+
+   [RFC9911]  Schönwälder, J., Ed., "Common YANG Data Types", RFC 9911,
+              DOI 10.17487/RFC9911, December 2025,
+              <https://www.rfc-editor.org/rfc/rfc9911>.
 
    [STD68]    Internet Standard 68,
               <https://www.rfc-editor.org/info/std68>.
@@ -812,8 +816,8 @@ Internet-Draft        The Restatement Anti-Pattern            March 2025
 
    [WP-ANTIPATTERN]
               "Anti-pattern", Wikipedia page (at the time of writing:),
-              21 July 2023, <https://en.wikipedia.org/w/
-              index.php?title=Anti-pattern&oldid=1144938932>.
+              20 June 2025, <https://en.wikipedia.org/w/
+              index.php?title=Anti-pattern&oldid=1296568489>.
 
 Acknowledgments
 
@@ -830,6 +834,14 @@ Author's Address
    Postfach 330440
    D-28359 Bremen
    Germany
+
+
+
+Bormann                  Expires 28 August 2026                [Page 15]
+
+Internet-Draft        The Restatement Anti-Pattern         February 2026
+
+
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
 
@@ -837,4 +849,48 @@ Author's Address
 
 
 
-Bormann                 Expires 3 September 2025               [Page 15]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                  Expires 28 August 2026                [Page 16]
