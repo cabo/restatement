@@ -372,12 +372,12 @@ This can be somewhat mitigated by clearly stating the purpose of a
 restatement, and the intended result when the restatement and the
 original diverge.
 
-<!-- 
+<!--
 ## Summary of Recommendations
 
 (...Add nice checklist text for authors and reviewers based on {{defuse}} later...)
  -->
- 
+
 # Examples
 
 ## Example: Web linking {{RFC8288}} {#example-8288}
