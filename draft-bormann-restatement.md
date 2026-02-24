@@ -58,17 +58,27 @@ informative:
 # Examples:
   STD68: abnf
   RFC5988:
+    ann: >
+      This specification is obsoleted by [RFC8288].
   RFC6690:
   RFC8288:
   RFC7230:
+    ann: >
+      This specification is obsoleted by [RFC9110] and [RFC9112].
+  RFC9110:
+  RFC9112:
   RFC4648:
   RFC7515:
   RFC6991:
+    ann: >
+      This specification is obsoleted by [RFC9911].
   RFC9444:
-  I-D.ietf-netmod-rfc6991-bis:
+  RFC9911: rfc6991-bis
   RFC3339:
   RFC9557: sedate
   I-D.draft-ietf-rats-eat-20:
+    ann: >
+      A revision of this specification was published as [RFC9711].
   RFC9711: eat
   rats-comment:
     target: https://mailarchive.ietf.org/arch/msg/rats/H8qXwQywD0W6x4QcC9Iwd5LYl2s
